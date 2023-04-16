@@ -123,7 +123,7 @@ add_record "${reverse_zone}" "${record}" "${TTL}" "${REVERSE_TYPE}" "${data}" \
 
 
 # UPDATE BIND9 RECORDS
-nsupdate -k "${SCPATH}/${KEY_FILE}" -v "${ddns_dir}/${hostname}.txt"
+nsupdate -k "${SCPATH}/${KEY_FILE}" -v "${ddns_dir}/${hostname}.txt" >> "${log_file}"
 
 # LOG
 printf '%s: Record %s.%s (%s) updated.\n' \
