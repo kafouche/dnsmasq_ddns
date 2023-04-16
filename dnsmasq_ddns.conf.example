@@ -1,0 +1,18 @@
+# The domain to update.
+# This will override the domain provided by DNSMASQ (DNSMASQ_DOMAIN).
+DOMAIN='domain.tld'
+
+# The file which contains the TSIG key
+KEY_FILE='doamin.key'
+
+# The primary DNS server
+SERVER='A.B.C.D'
+
+# Time To Live to use when updating record.
+TTL=3600
+
+# Type of record to use when updating zone.
+TYPE='A'
+
+# Type of record to use when updating reverse zone.
+REVERSE_TYPE='PTR'
