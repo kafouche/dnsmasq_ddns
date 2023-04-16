@@ -126,7 +126,8 @@ add_record "${reverse_zone}" "${record}" "${TTL}" "${REVERSE_TYPE}" "${data}" \
 nsupdate -k "${SCPATH}/${KEY_FILE}" -v "${ddns_dir}/${hostname}.txt"
 
 # LOG
-printf '%s: Record %s.%s has been updated with IP address %s.\n' \
-    "$(date '+%Y-%M-%d - %H:%m')" "${hostname}" "${domain}" "${ipaddr}"
+printf '%s: Record %s.%s (%s) updated.\n' \
+    "$(date '+%Y-%M-%d - %H:%m')" "${hostname}" "${domain}" "${ipaddr}" \
+    >> "${log_file}"
 
 exit 0
